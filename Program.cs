@@ -1,4 +1,4 @@
-﻿using AdventOfCode._22._2_RockPaperScissors;
+﻿using AdventOfCode._22._3_Problem;
 
 namespace AdventOfCode
 {
@@ -6,7 +6,7 @@ namespace AdventOfCode
     {
         internal static void Main(String[] args)
         {
-            Console.WriteLine(PartOne.Solve());
+            Console.WriteLine(PartTwo.Solve());
         }
     }
 }
