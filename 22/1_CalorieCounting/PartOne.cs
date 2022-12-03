@@ -5,31 +5,20 @@
         // T = O(n) | S = O(1)
         public static int Solve()
         {
-            int maxCalories = 0;
-            while (true)
+            int maxCalories = 0, currentCalories = 0;
+            foreach (var input in File.ReadAllLines("../../../input.txt"))
             {
-                string? input = Console.ReadLine();
-                if (string.IsNullOrEmpty(input))
+                if (input == string.Empty)
                 {
-                    break;
-                }
-
-                int currentCalories = Convert.ToInt32(input);
-                while (true)
+                    maxCalories = Math.Max(maxCalories, currentCalories);
+                    currentCalories = 0;
+                } else
                 {
-                    input = Console.ReadLine();
-                    if (string.IsNullOrEmpty(input))
-                    {
-                        break;
-                    }
-
                     currentCalories += Convert.ToInt32(input);
                 }
-
-                maxCalories = Math.Max(maxCalories, currentCalories);
             }
 
-            return maxCalories;
+            return Math.Max(maxCalories, currentCalories);
         }
 
         // T = O(n * log(k)) | S = O(k)

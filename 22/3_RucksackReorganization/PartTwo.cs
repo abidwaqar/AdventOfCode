@@ -1,4 +1,4 @@
-﻿namespace AdventOfCode._22._3_Problem
+﻿namespace AdventOfCode._22._3_RucksackReorganization
 {
     internal static class PartTwo
     {
@@ -10,14 +10,8 @@
         {
             int prioritiesSum = 0, groupSize = 3, i = 0;
             ISet<char> elf1 = new HashSet<char>(), elf2 = new HashSet<char>(), elf3 = new HashSet<char>();
-            while (true)
+            foreach (var input in File.ReadAllLines("../../../input.txt"))
             {
-                string? input = Console.ReadLine();
-                if (string.IsNullOrEmpty(input))
-                {
-                    break;
-                }
-
                 var elf = (i % groupSize) switch
                 {
                     0 => elf1,

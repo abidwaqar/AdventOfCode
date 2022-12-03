@@ -23,14 +23,8 @@
         public static int Solve()
         {
             int finalScore = 0;
-            while (true)
+            foreach (var input in File.ReadAllLines("../../../input.txt"))
             {
-                string? input = Console.ReadLine();
-                if (string.IsNullOrEmpty(input))
-                {
-                    break;
-                }
-
                 var processedInput = input.Split(' ');
                 var opponentSelection = MapSelection(processedInput[0][0]);
                 var ourSelection = MapSelection(processedInput[1][0]);

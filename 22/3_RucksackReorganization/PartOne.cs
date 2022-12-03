@@ -1,4 +1,4 @@
-﻿namespace AdventOfCode._22._3_Problem
+﻿namespace AdventOfCode._22._3_RucksackReorganization
 {
     internal static class PartOne
     {
@@ -10,14 +10,8 @@
         {
             int prioritiesSum = 0;
             var seenItems = new HashSet<char>();
-            while (true)
+            foreach (var input in File.ReadAllLines("../../../input.txt"))
             {
-                string? input = Console.ReadLine();
-                if (string.IsNullOrEmpty(input))
-                {
-                    break;
-                }
-
                 for (int i = 0; i < input.Length / 2; ++i)
                 {
                     seenItems.Add(input[i]);
