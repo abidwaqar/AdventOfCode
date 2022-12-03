@@ -1,4 +1,4 @@
-﻿using AdventOfCode._22._3_RucksackReorganization;
+﻿using AdventOfCode._22._4_SolutionTemplate;
 
 namespace AdventOfCode
 {
