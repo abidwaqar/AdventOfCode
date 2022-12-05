@@ -1,4 +1,4 @@
-﻿using AdventOfCode._22._4_CampCleanup;
+﻿using AdventOfCode._22._5_SolutionTemplate;
 
 namespace AdventOfCode
 {
