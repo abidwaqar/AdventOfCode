@@ -1,4 +1,4 @@
-﻿using AdventOfCode._22._5_SolutionTemplate;
+﻿using AdventOfCode._22._6_TuningTrouble
 
 namespace AdventOfCode
 {
