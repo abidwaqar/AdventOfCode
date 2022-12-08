@@ -1,6 +1,4 @@
-﻿using System.Linq;
-
-namespace AdventOfCode._22._6_TuningTrouble
+﻿namespace AdventOfCode._22._6_TuningTrouble
 {
     internal static class PartOne
     {
