@@ -1,4 +1,4 @@
-﻿using AdventOfCode._22._8_TreetopTreehouse;
+﻿using AdventOfCode._22._6_TuningTrouble;
 
 namespace AdventOfCode
 {

@@ -2,7 +2,8 @@
 
 internal static class PartOne
 {
-    // T = O(n) | S = O(n * log(n))
+    // T = O(d + f) | S = O(d + f + log(d))
+    // Where d is the count of directories and f is the count of files
     public static int Solve()
     {
         Directory rootDirectory = new Directory("/", null);

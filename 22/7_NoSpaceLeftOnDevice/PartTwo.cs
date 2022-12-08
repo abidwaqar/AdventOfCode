@@ -1,8 +1,11 @@
-﻿namespace AdventOfCode._22._7_NoSpaceLeftOnDevice;
+﻿using System.Drawing;
+
+namespace AdventOfCode._22._7_NoSpaceLeftOnDevice;
 
 internal static class PartTwo
 {
-    // T = O(n) | S = O(n * log(n))
+    // T = O(d + f) | S = O(d + f + log(d))
+    // Where d and f are counts of directories and files respectively
     public static int Solve()
     {
         Directory rootDirectory = new Directory("/", null);
@@ -44,27 +47,52 @@ internal static class PartTwo
             }
         }
 
-        PriorityQueue<int, int> dirSizes = new PriorityQueue<int, int>();
-        int spaceToFreeUp = 30000000 - (70000000 - dfs(rootDirectory, dirSizes));
-        while (dirSizes.Peek() < spaceToFreeUp)
-        {
-            dirSizes.Dequeue();
-        }
-
-        return dirSizes.Dequeue();
+        int spaceToFreeUp = 30000000 - (70000000 - directorySize(rootDirectory));
+        return sizeOfDirectoryToBeDelete(rootDirectory, spaceToFreeUp).sizeOfDirectoryToBeDeleted;
     }
 
-    private static int dfs(Directory dir, PriorityQueue<int, int> dirSizes)
+    private static int directorySize(Directory dir)
     {
         int dirSize = dir.files.Sum(x => x.size);
         foreach (Directory childDir in dir.directories.Values)
         {
-            dirSize += dfs(childDir, dirSizes);
+            dirSize += directorySize(childDir);
         }
 
-        dirSizes.Enqueue(dirSize, dirSize);
-
         return dirSize;
+    }
+
+    private static Result sizeOfDirectoryToBeDelete(Directory dir, int spaceToFreeUp)
+    {
+        Result result = new Result(dir.files.Sum(x => x.size), -1);
+        foreach (Directory childDir in dir.directories.Values)
+        {
+            Result childResult = sizeOfDirectoryToBeDelete(childDir, spaceToFreeUp);
+            result.size += childResult.size;
+            if (childResult.sizeOfDirectoryToBeDeleted != -1)
+            {
+                result.sizeOfDirectoryToBeDeleted = result.sizeOfDirectoryToBeDeleted == -1 ? childResult.sizeOfDirectoryToBeDeleted : Math.Min(result.sizeOfDirectoryToBeDeleted, childResult.sizeOfDirectoryToBeDeleted);
+            }
+        }
+
+        if (result.sizeOfDirectoryToBeDeleted == -1 && spaceToFreeUp <= result.size)
+        {
+            result.sizeOfDirectoryToBeDeleted = result.size;
+        }
+
+        return result;
+    }
+
+    private class Result
+    {
+        public int size;
+        public int sizeOfDirectoryToBeDeleted;
+
+        public Result(int size, int sizeOfDirectoryToBeDeleted)
+        {
+            this.size = size;
+            this.sizeOfDirectoryToBeDeleted = sizeOfDirectoryToBeDeleted;
+        }
     }
 
     private class Directory

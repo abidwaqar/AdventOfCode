@@ -5,25 +5,31 @@
         // T = O(n) | S = O(1)
         public static int Solve()
         {
-            var map = new Dictionary<char, int>();
-            var startIdx = -1;
-            var distinctCharacters = 14;
-            var input = File.ReadAllLines("../../../input.txt").Single();
+            ISet<char> set = new HashSet<char>();
+            int distinctCharacters = 14;
+            int startIdx = 0;
+            string input = File.ReadAllLines("../../../input.txt").Single();
 
             for (int i = 0; i < input.Length; ++i)
             {
-                if (!map.ContainsKey(input[i]) || map[input[i]] < startIdx)
+                if (!set.Contains(input[i]))
                 {
-                    map[input[i]] = i;
-                    if (i - startIdx == distinctCharacters)
+                    set.Add(input[i]);
+
+                    if (set.Count == distinctCharacters)
                     {
                         return i + 1;
                     }
                 }
                 else
                 {
-                    startIdx = map[input[i]];
-                    map[input[i]] = i;
+                    while (input[startIdx] != input[i])
+                    {
+                        set.Remove(input[startIdx]);
+                        ++startIdx;
+                    }
+
+                    ++startIdx;
                 }
             }
 
