@@ -1,13 +1,13 @@
-﻿using AdventOfCode._22._9_RopeBridge;
+﻿using AdventOfCode._22._10_CathodeRayTube;
 
-namespace AdventOfCode
+namespace AdventOfCode;
+
+class Program
 {
-   class Program
+    internal static void Main(String[] args)
     {
-        internal static void Main(String[] args)
-        {
-            Console.WriteLine(PartOne.Solve());
-            Console.WriteLine(PartTwo.Solve());
-        }
+        Console.WriteLine(PartOne.Solve());
+        //Console.WriteLine(PartTwo.Solve());
+        PartTwo.Solve();
     }
 }
