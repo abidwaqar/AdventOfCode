@@ -6,7 +6,7 @@ internal static class PartOne
     public static int Solve()
     {
         int result = 0;
-        foreach (string input in File.ReadAllLines("../../../input.txt"))
+        foreach (string input in File.ReadAllLines("../../../Input/dev.txt"))
         {
             // Core logic
         }
