@@ -1,4 +1,4 @@
-﻿using AdventOfCode._22._18_BoilingBoulders;
+﻿using AdventOfCode._22._19_NotEnoughMinerals;
 
 namespace AdventOfCode;
 
