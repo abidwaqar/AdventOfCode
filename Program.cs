@@ -1,4 +1,4 @@
-﻿using AdventOfCode._22._23_UnstableDiffusion;
+﻿using AdventOfCode._22._24_BlizzardBasin;
 
 namespace AdventOfCode;
 
