@@ -1,4 +1,4 @@
-﻿using AdventOfCode._22._24_BlizzardBasin;
+﻿using AdventOfCode._22._1_CalorieCounting;
 
 namespace AdventOfCode;
 
