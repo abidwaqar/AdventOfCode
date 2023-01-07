@@ -8,7 +8,7 @@
             ISet<char> set = new HashSet<char>();
             int distinctCharacters = 14;
             int startIdx = 0;
-            string input = File.ReadAllLines("../../../input.txt").Single();
+            string input = File.ReadAllLines("../../../Input/prod.txt").Single();
 
             for (int i = 0; i < input.Length; ++i)
             {

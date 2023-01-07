@@ -13,7 +13,7 @@ internal static class PartOne
         int minSensorX = int.MaxValue;
         int maxSensorX = int.MinValue;
         List<Tuple<Coordinates, Coordinates>> sensorsAndTheirClosestBeaconsCoords = new();
-        foreach (string input in File.ReadAllLines("../../../input.txt"))
+        foreach (string input in File.ReadAllLines("../../../Input/prod.txt"))
         {
             string[] processedInput = input.Split(delimeters, StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries);
             Coordinates sensorCoords = new(Convert.ToInt32(processedInput[0]), Convert.ToInt32(processedInput[1]));

@@ -7,7 +7,7 @@
         public static int Solve()
         {
             List<List<int>> grid = new List<List<int>>();
-            foreach (var input in File.ReadAllLines("../../../input.txt"))
+            foreach (var input in File.ReadAllLines("../../../Input/prod.txt"))
             {
                 List<int> row = new List<int>();
                 foreach (int height in input)

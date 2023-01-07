@@ -10,7 +10,7 @@
         {
             int prioritiesSum = 0, groupSize = 3, i = 0;
             ISet<char> elf1 = new HashSet<char>(), elf2 = new HashSet<char>(), elf3 = new HashSet<char>();
-            foreach (var input in File.ReadAllLines("../../../input.txt"))
+            foreach (var input in File.ReadAllLines("../../../Input/prod.txt"))
             {
                 var elf = (i % groupSize) switch
                 {

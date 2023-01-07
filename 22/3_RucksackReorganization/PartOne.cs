@@ -10,7 +10,7 @@
         {
             int prioritiesSum = 0;
             var seenItems = new HashSet<char>();
-            foreach (var input in File.ReadAllLines("../../../input.txt"))
+            foreach (var input in File.ReadAllLines("../../../Input/prod.txt"))
             {
                 for (int i = 0; i < input.Length / 2; ++i)
                 {

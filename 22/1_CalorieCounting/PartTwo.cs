@@ -7,7 +7,7 @@
             var minHeap = new PriorityQueue<int, int>();
             var k = 3;
             var currentCalories = 0;
-            foreach (var input in File.ReadAllLines("../../../input.txt"))
+            foreach (var input in File.ReadAllLines("../../../Input/prod.txt"))
             {
                 if (input == string.Empty)
                 {

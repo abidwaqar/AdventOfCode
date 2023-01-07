@@ -10,7 +10,7 @@ internal static class PartTwo
     {
         Directory rootDirectory = new Directory("/", null);
         Directory currentDirectory = rootDirectory;
-        foreach (var input in System.IO.File.ReadAllLines("../../../input.txt"))
+        foreach (var input in System.IO.File.ReadAllLines("../../../Input/prod.txt"))
         {
             if (input == "$ cd /" || input == "$ ls")
             {

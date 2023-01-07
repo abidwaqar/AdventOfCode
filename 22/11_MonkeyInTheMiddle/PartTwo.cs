@@ -10,7 +10,7 @@ internal static class PartTwo
         IList<Monkey> monkeys = new List<Monkey>();
         Monkey currentMonkey = new Monkey(0);
         long superModulo = 1;
-        foreach (string input in File.ReadAllLines("../../../input.txt"))
+        foreach (string input in File.ReadAllLines("../../../Input/prod.txt"))
         {
             if (input.Contains("Monkey"))
             {

@@ -8,7 +8,7 @@ internal static class PartTwo
     {
         Dictionary<string, Monkey> monkeys = new();
         Dictionary<string, string> monkeyToParent = new();
-        foreach (string input in File.ReadAllLines("../../../input.txt"))
+        foreach (string input in File.ReadAllLines("../../../Input/prod.txt"))
         {
             string[] processedInput = input.Split(new char[] { ':', ' ' }, StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
 

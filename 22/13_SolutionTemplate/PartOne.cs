@@ -13,7 +13,7 @@ internal static class PartOne
         int index = 1;
         ArrayList? packet1 = null;
         ArrayList? packet2 = null;
-        foreach (string input in File.ReadAllLines("../../../input.txt"))
+        foreach (string input in File.ReadAllLines("../../../Input/prod.txt"))
         {
             if (input == string.Empty)
             {

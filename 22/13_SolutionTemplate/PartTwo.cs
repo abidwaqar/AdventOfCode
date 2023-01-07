@@ -10,7 +10,7 @@ internal static class PartTwo
     public static int Solve()
     {
         List<ArrayList> packets = new List<ArrayList>();
-        foreach (string input in File.ReadAllLines("../../../input.txt"))
+        foreach (string input in File.ReadAllLines("../../../Input/prod.txt"))
         {
             if (input == string.Empty)
             {

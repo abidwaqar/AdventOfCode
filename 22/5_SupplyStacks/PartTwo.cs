@@ -22,7 +22,7 @@ namespace AdventOfCode._22._5_SupplyStacks
         public static string Solve()
         {
             bool realInputStarted = false;
-            foreach (var input in File.ReadAllLines("../../../input.txt"))
+            foreach (var input in File.ReadAllLines("../../../Input/prod.txt"))
             {
                 if (!realInputStarted)
                 {

@@ -6,7 +6,7 @@
         public static int Solve()
         {
             int result = 0;
-            foreach (var input in File.ReadAllLines("../../../input.txt"))
+            foreach (var input in File.ReadAllLines("../../../Input/prod.txt"))
             {
                 var sections = input.Split(',');
                 

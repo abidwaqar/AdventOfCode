@@ -12,7 +12,7 @@ internal static class PartTwo
             {"addx", 2 }
         };
         int cycle = 0, X = 1;
-        foreach (string input in File.ReadAllLines("../../../input.txt"))
+        foreach (string input in File.ReadAllLines("../../../Input/prod.txt"))
         {
             string[] inputArr = input.Split(' ');
             for (int i = operationsToRequiredCycles[inputArr[0]] - 1; i >= 0; --i)

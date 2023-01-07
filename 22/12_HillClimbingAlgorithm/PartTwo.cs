@@ -8,7 +8,7 @@ internal static class PartTwo
     {
         List<Tuple<int, int>> startingPositions = new();
         List<List<char>> grid = new List<List<char>>();
-        foreach (string input in File.ReadAllLines("../../../input.txt"))
+        foreach (string input in File.ReadAllLines("../../../Input/prod.txt"))
         {
             List<char> row = new List<char>();
             foreach (char character in input)

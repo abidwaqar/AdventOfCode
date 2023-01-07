@@ -9,7 +9,7 @@ internal static class PartOne
         StringSplitOptions stringSplitOptions = StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries;
         IList<Monkey> monkeys = new List<Monkey>();
         Monkey currentMonkey = new Monkey(0);
-        foreach (string input in File.ReadAllLines("../../../input.txt"))
+        foreach (string input in File.ReadAllLines("../../../Input/prod.txt"))
         {
             if (input.Contains("Monkey"))
             {

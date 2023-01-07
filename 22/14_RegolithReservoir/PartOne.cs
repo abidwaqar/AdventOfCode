@@ -8,7 +8,7 @@ internal static class PartOne
     {
         Coordinates gridStartCoords = new Coordinates(int.MaxValue, 0);
         Coordinates gridEndCoords = new Coordinates(int.MinValue, int.MinValue);
-        foreach (string input in File.ReadAllLines("../../../input.txt"))
+        foreach (string input in File.ReadAllLines("../../../Input/prod.txt"))
         {
             string[] allCoordinates = input.Split("->", StringSplitOptions.TrimEntries);
 
@@ -24,7 +24,7 @@ internal static class PartOne
         }
 
         char[,] grid = new char[gridEndCoords.y - gridStartCoords.y + 1, gridEndCoords.x - gridStartCoords.x + 1];
-        foreach (string input in File.ReadAllLines("../../../input.txt"))
+        foreach (string input in File.ReadAllLines("../../../Input/prod.txt"))
         {
             string[] allCoordinates = input.Split("->", StringSplitOptions.TrimEntries);
             Coordinates prevCoordinates = new Coordinates(allCoordinates[0]) - gridStartCoords;

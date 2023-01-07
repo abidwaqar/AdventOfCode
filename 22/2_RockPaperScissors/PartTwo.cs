@@ -34,7 +34,7 @@
         public static int Solve()
         {
             int finalScore = 0;
-            foreach (var input in File.ReadAllLines("../../../input.txt"))
+            foreach (var input in File.ReadAllLines("../../../Input/prod.txt"))
             {
                 var processedInput = input.Split(' ');
                 var opponentSelection = MapSelection(processedInput[0][0]);

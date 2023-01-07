@@ -14,7 +14,7 @@ internal static class PartOne
             knotsCoords[i] = new Coordinate();
         }
 
-        foreach (var input in File.ReadAllLines("../../../input.txt"))
+        foreach (var input in File.ReadAllLines("../../../Input/prod.txt"))
         {
             string[] inputArr = input.Split(' ');
             char direction = Convert.ToChar(inputArr[0]);
